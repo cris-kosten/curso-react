@@ -1,15 +1,20 @@
+// importacion por defecto
+// import Navbar from "./componentes/Nabvar.jsx"
 
-import Footer  from "./Footer.jsx";
+// importacion nombrada
+
+import Footer from "./componentes/Footer.jsx";
+import Home from "./componentes/Home.jsx";
+import { Navbar } from "./componentes/Nabvar.jsx";
 
 function App() {
-  let nombre = "Chuquito"
-
-  return <div> 
-    <h1>Bienvenido {nombre} al inicio del Mundo de React </h1>
-    <h2>Queres Seguir Capacitandote?</h2>
-    <Footer/>
-  </div>;
-  
+  return (
+    <div>
+      <Navbar />
+      <Home />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
