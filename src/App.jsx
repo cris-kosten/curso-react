@@ -1,47 +1,23 @@
-import { useState } from "react";
-import { Counter } from "./components/common/counter/Counter";
+import { PruebasResponsive } from "./components/common/pruebasResponsive/PruebasResponsive";
 
-import { Footer } from "./components/layout/footer/Footer";
-
-import { Navbar } from "./components/layout/navbar/Navbar";
-
-import ItemListContainer from "./components/pages/itemLIstContainer/ItemListContainer";
+import { ThemeProvider } from "@emotion/react";
+import PruebaComponentes from "./components/common/pruebaComponentes/PruebaComponentes";
+import { themaClaro } from "./components/pages/configuracion";
 
 
 
 function App() {
 
-  // name  ---> cristian
-  //name  ----> hugo
-
-  const [name, setName] = useState("cristian")
-
-  // creamos la funcion para cambiar el nombre
-  // const cambiarNombre = (nuevoNombre) => {
-  //   setName(nuevoNombre);
-  // };
-
-
   return (
-    <div>
-      <Navbar />
-      <ItemListContainer />
-      <Footer />
+    <ThemeProvider theme={themaClaro}>
 
-      <Counter />
+      <div>
+        <PruebasResponsive />
+        <PruebaComponentes />
 
+      </div>
+    </ThemeProvider>
 
-      <h2>{name}</h2>
-      {/* opcion 01 -- comun que no recibe parametros */}
-      {/* <button onClick={cambiarNombre}>Cambiar nombre</button>  */}
-
-      {/* opcion 02 -creando una funcion dentro de un colvack */}
-      {/* <button onClick={() => { cambiarNombre("Chuquito") }}>Cambiar nombre</button>
-      */}
-
-      {/* Opcion 3 recomendable */}
-      <button onClick={() => setName("Huguito")}>Cambiar name</button>
-    </div>
   );
 
 }

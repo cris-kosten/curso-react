@@ -1,5 +1,6 @@
 import { BsFillCartCheckFill } from "react-icons/bs";
 
+
 export const Navbar = () => {
     return (
         <div>
